@@ -23,19 +23,16 @@
   <!-- Navigation -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Team 4</a>
+      <a class="navbar-brand" href="index.php">Team 4</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
+            <a class="nav-link" href="index.php">Home
               <span class="sr-only">(current)</span>
             </a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" href="flightno.html">Probability</a>
           </li>
 		<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,11 +66,12 @@
 
     <!-- Heading Row -->
     <div class="row align-items-center my-5">
-	  <a class="Head-text1"><img src="img/qwer.jpg" alt="" />FlightDelay.io</a>
+	  <i class="fas fa-fighter-jet"></i>
+	    <a class="Head-text1">FlightDelay.io</a>
       <!-- /.col-lg-8 -->
       <div>
         <h1 class="font-weight-light">Search your flight number and see if your flight will be delayed</h1>
-			<form method="get" action="form-action.php">
+			<form class="" action="/flightno.php" method="POST">
 				<div class="in-line">
 					<input type="text" name="name" value="KE082"  size = "138">
 					<input type="button" name="name" value="Search" style = "outline-color: blue">
@@ -83,16 +81,16 @@
     </div>
 	<div>
 	  <h1>Flight Details </h1>
-		<form method="get" action="form-action.php">
+		<form method="POST" action="/flightno.php">
 		  <div>
 			<input type="radio" class="form-control1" id="select" value="One-way">One-way
 			<input type="radio" class="form-control1" id="select" value="Round trip">Round trip
 		  </div>
 		  <div>
-			<input type="text" class="form-control1" id="select" value="Arrive" style="width: 30%; height:100%;">
-			<input type="text" class="form-control1" id="select" value="Departure" style="width: 30%; height:100%;">
-			<input type="date" class="form-control1" id="select" value="Date" style="width: 30%; height:100%;">
-			<input type="button" class="form-control1" id="select" value="search2" style = "outline-color: blue">
+			<input type="text" value="Arrive" name="input_Arrive" style="width: 30%; height:100%;">
+			<input type="text" value="Departure" name = "input_Departure" style="width: 30%; height:100%;">
+			<input type="date" value="Date" name = "input_Date" 	style="width: 30%; height:100%;">
+			<input type="submit" value="search2" style = "outline-color: blue">
 		  </div>		  
 		</form>
 	</div>
@@ -106,7 +104,7 @@
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-			  <a href="1번홈피" class="card-title"><img src="img/qwer.jpg" alt="" /></a>
+			  <a href="stats1.html" class="card-title"><img src="img/qwer.jpg" style="max-width: 100%; height: auto;"alt="" /></a>
 				<p class="card-text1">Statistics by airport</p>
           </div>
         </div>
