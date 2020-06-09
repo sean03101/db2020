@@ -1,4 +1,35 @@
 <!DOCTYPE html>
+<?php
+
+	$con = mysqli_connect("localhost" , "root" , "") or die("실피");
+	
+	$input_Departure = $_POST['input_Departure'];
+	$input_Arrive = $_POST['input_Arrive'];
+	$input_Date= $_POST['input_Date'];
+/*	
+	$sql = "인풋받은거를 이용해서 조건에 맞는 데이터 추출하는 쿼리 넣기"
+	$ret = mysqli_query($con, $sql);
+	
+	$sql1 = ret에서 테이블에서 결항별로 카운트 해서 그 첫번째 보여주고자 하는 테이블 따로 만들기
+	$ret1 = mysqli_query($con, $sql1);
+	
+	#여기서는 쿼리를 직접 못돌려봐서 햇갈리는데 결과값 저장
+	$_Post["result1"] = $result1;
+	include "result1.php(클릭했을때 전체 결과값을 보여주는 새로운 페이지로 이동시키기)";
+	  
+	$first1 = mysqli_fetch_array($ret1);
+	$second1 = mysqli_fetch_array($ret1); 
+	$third1 = mysqli_fetch_array($ret1);
+	
+	그리고 밑에 가서 해당 테이블 html에 가서 echo first1[0] [1] [2] 이렇게 넣어줘서 그 값 출력되게 하기
+	
+	이거 반복
+	
+*/	
+	mysqli_close($con);
+?>
+
+
 <html lang="en">
 
 <head>
@@ -24,29 +55,32 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">FlightDelay</a>
+      <a class="navbar-brand" href="index.php">Team 4</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
+            <a class="nav-link" href="index.php">Home
+           
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Statistics</a>
-          </li>
-          <li class="nav-item">
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Statistics
+			<span class="sr-only">(current)</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="stats1.html">Airport</a>
+            <a class="dropdown-item" href="#">Airline</a>
+            <a class="dropdown-item" href="#">Season</a>
+          </div>
+        </li>
+	      <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
         </ul>
       </div>
     </div>
@@ -63,35 +97,31 @@
     <div class="card bg-light my-5 py-4 text-center">
       <div class="card-body">
         <div class="row align-items-center">
-          <div class="col">
+          <div class="col1" style="width: 25%; height: auto;">
             <div class="card mb-4 shadow-sm h-100">
               <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Origin</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title">NY,JFK</h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>2020.05.09 SAT</li>
-                  <li class="font-weight-bold">14:00 EDT</li>
+                <h1 class="card-title" name = "input_Departure1"><?php echo $input_Departure; ?></h1>
+                <ul class="list-unstyled mt-3 mb-4" name = "input_Date1"> <?php echo $input_Date; ?>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-6 align-self-center">
+          <div class="col-6 align-self-center1">
             <div class="progress">
               <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
             </div>
           </div>
-          <div class="col">
+          <div class="col1" style="width:25%; height: auto;">
             <div class="card mb-4 shadow-sm h-100">
               <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Destination</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title">SEOUL,ICN</h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>2020.05.10 SUN</li>
-                  <li class="font-weight-bold">17:10 KST</li>
+                <h1 class="card-title" name = "input_Arrive1"><?php echo $input_Arrive; ?></h1>
+                <ul class="list-unstyled mt-3 mb-4" name = "input_Date1"><?php echo $input_Date; ?>
                 </ul>
               </div>
             </div>
@@ -102,7 +132,8 @@
     </div>
 
     <!-- Delay Information -->
-    <div class="card-group">
+    <!--
+	<div class="card-group">
       <div class="card text-center bg-light">
         <div class="card-header">
           <h3 class="font-weight-normal">Is Delayed</h3>
@@ -119,12 +150,13 @@
           <h3 class="card-title">Between 1 and 2 hours</h3>
         </div>
       </div>
+	  -->
       <div class="card text-center bg-light">
         <div class="card-header">
           <h3 class="font-weight-normal">Delay Rate</h3>
         </div>
         <div class="card-body">
-          <h3 class="card-title">60%</h3>
+          <h3 class="card-title">60%</h3><!-- 여기에 쿼리에서 날짜 공항에 맞춰서 뽑은 것중에 지연 건 개수/ 뽑은 거 전체 개수 -->
         </div>
       </div>
     </div>
@@ -132,9 +164,9 @@
     <!-- Delay Statistics -->
     <div class="row align-items-center my-5 text-center">
       <div class="col-lg-6">
-        <h2 class="font-weight-bold">JFK airport delay stat</h2>
+        <h2 class="font-weight-bold">JFK airport delay stat</h2> 
         <p>Delay Rate</p>
-        <table class="table table-sm">
+        <table class="table table-sm">  
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -146,7 +178,7 @@
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td>Mark</td>
+              <td>Mark</td>                 <!-- 여기에 쿼리에서 날짜 공항에 맞춰서 뽑은 것중에 지연 건 개수/ 뽑은 거 전체 개수 -->
               <td>Otto</td>
               <td>@mdo</td>
             </tr>
@@ -163,6 +195,9 @@
             </tr>
           </tbody>
         </table>
+		  <div class="table-footer">
+            <a href="#" class="btn btn-primary">Search More</a>
+          </div>
       </div>
       <div class="col-lg-6">
         <h2 class="font-weight-bold">KoranAir airline delay stat</h2>
@@ -195,6 +230,9 @@
             </tr>
           </tbody>
         </table>
+		  <div class="table-footer">
+            <a href="#" class="btn btn-primary">Search More</a>
+          </div>
       </div>
     </div>
 
