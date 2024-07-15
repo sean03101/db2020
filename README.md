@@ -11,3 +11,5 @@
 
 ## 데이터셋
 데이터셋 : 17년 1월부터 19년 6월까지의 국내 항공 데이터
+
+![image](https://github.com/user-attachments/assets/ed9223f5-0f6b-4072-bbfc-a61d92818275)
