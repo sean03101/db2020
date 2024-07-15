@@ -34,4 +34,4 @@ MySQL을 사용해 전처리 진행 및 Tableau에 데이터 전달
 * PHP와 Ajax를 사용해 MySQL 데이터베이스에 연결 및 통신하며, 시각화 결과를 웹페이지로 출력
 
 ### 웹페이지 구조도
-![image](https://github.com/user-attachments/assets/98a10a26-624b-4eb5-9d29-b6863cf2f9f2)
+![image](https://github.com/user-attachments/assets/84e9ec93-9cc7-4bcd-8e7f-bc51f4598c3c)
