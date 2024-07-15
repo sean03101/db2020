@@ -35,3 +35,7 @@ MySQL을 사용해 전처리 진행 및 Tableau에 데이터 전달
 
 ### 웹페이지 구조도
 ![image](https://github.com/user-attachments/assets/84e9ec93-9cc7-4bcd-8e7f-bc51f4598c3c)
+
+
+### index.php
+![image](https://github.com/user-attachments/assets/af46c626-ca77-4bf7-9328-a1d53bbfb350)
