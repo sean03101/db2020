@@ -7,7 +7,8 @@
 
 ## 기술 스택
 
-![image](https://github.com/user-attachments/assets/2bf7d3be-8995-49c7-84c2-7dd6a6844381)
+![image](https://github.com/user-attachments/assets/6669550b-46bb-47fa-b362-f298f6a8879b)
+
 
 ## 데이터셋
 데이터셋 : 17년 1월부터 19년 6월까지의 국내 항공 데이터
