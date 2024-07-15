@@ -14,3 +14,16 @@
 데이터셋 : 17년 1월부터 19년 6월까지의 국내 항공 데이터
 
 ![image](https://github.com/user-attachments/assets/ed9223f5-0f6b-4072-bbfc-a61d92818275)
+
+
+## 데이터 전처리
+MySQL을 사용해 전처리 진행 및 Tableau에 데이터 전달
+
+![image](https://github.com/user-attachments/assets/394669d5-e808-4bee-adb9-46cbd3d0f787)
+*   분석을 위해 메타 데이터가 담긴 테이블 merge
+
+![image](https://github.com/user-attachments/assets/33dfabdc-c3be-49e3-9400-92605f0a709d)
+*   예상 출발 시간, 예상 도착 시간, 실제 도착 시간을 이용해 'Scheduled Time'과 ‘Actual Time’ 계산
+
+![image](https://github.com/user-attachments/assets/214d48b7-5f19-443b-a5bd-b8c1dbff1f0d)
+*   'Scheduled Time'과 ‘Actual Time’의 차이를 이용해 'Delay Time' 계산 후 이를 구간화
