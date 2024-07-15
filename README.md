@@ -27,3 +27,11 @@ MySQL을 사용해 전처리 진행 및 Tableau에 데이터 전달
 
 ![image](https://github.com/user-attachments/assets/214d48b7-5f19-443b-a5bd-b8c1dbff1f0d)
 *   'Scheduled Time'과 ‘Actual Time’의 차이를 이용해 'Delay Time' 계산 후 이를 구간화
+
+
+
+## Web Programming & Database
+* PHP와 Ajax를 사용해 MySQL 데이터베이스에 연결 및 통신하며, 시각화 결과를 웹페이지로 출력
+
+### 웹페이지 구조도
+![image](https://github.com/user-attachments/assets/98a10a26-624b-4eb5-9d29-b6863cf2f9f2)
