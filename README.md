@@ -39,4 +39,4 @@ MySQL을 사용해 전처리 진행 및 Tableau에 데이터 전달
 
 ### index.php
 ![image](https://github.com/user-attachments/assets/af46c626-ca77-4bf7-9328-a1d53bbfb350)
-*   'data.php'를 활용해 
+*   'index.php'에서 보여지는 출-도착 공항 및 출발월일은 'data.php'에서 존재하는 데이터만 보이도록 필터링 진행 
