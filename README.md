@@ -45,3 +45,19 @@ MySQL을 사용해 전처리 진행 및 Tableau에 데이터 전달
 ### flightno.php
 ![image](https://github.com/user-attachments/assets/4b9e2e7f-a67e-4546-8c0f-35330c135b04)
 *   'index.php'에서 입력한 쿼리를 기반으로 지연율 및 시간을 계산하며 주요 결항 원인을 출력 
+
+
+### airline.php, airport.php, delayreason.php
+*   미리 제작해둔 시각화 자료를 'Tableau public server'에 업로드하고 저장된 콘텐츠를 웹페이지에 로드
+
+  ![image](https://github.com/user-attachments/assets/b377efc6-49e5-4c57-b692-292a5c767939)
+
+  ![image](https://github.com/user-attachments/assets/917420fd-d107-40d2-a000-10c9ce002217)
+
+  ![image](https://github.com/user-attachments/assets/d160c132-3e60-4207-9d29-ee2a1057c17c)
+
+  ![image](https://github.com/user-attachments/assets/a96ac780-2e28-4da9-9226-b6423e25ef23)
+
+
+
+  
