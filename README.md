@@ -40,3 +40,8 @@ MySQL을 사용해 전처리 진행 및 Tableau에 데이터 전달
 ### index.php
 ![image](https://github.com/user-attachments/assets/af46c626-ca77-4bf7-9328-a1d53bbfb350)
 *   'index.php'에서 보여지는 출-도착 공항 및 출발월일은 'data.php'에서 존재하는 데이터만 보이도록 필터링 진행 
+
+
+### flightno.php
+![image](https://github.com/user-attachments/assets/4b9e2e7f-a67e-4546-8c0f-35330c135b04)
+*   'index.php'에서 입력한 쿼리를 기반으로 지연율 및 시간을 계산하며 주요 결항 원인을 출력 
